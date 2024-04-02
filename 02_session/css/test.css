@@ -1,0 +1,59 @@
+body {
+    display: grid;
+    justify-content: center;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.box1 {
+    width: 20%;
+    height: 100%;
+    background-color: #EEEEE9;
+}
+
+.box2 {
+    width: 80%;
+    height: 100%;
+    background-color: #D6CCC2;
+}
+
+main {
+    width: 100%;
+    height: 400px;
+}
+
+.box3 {
+    width: 100%;
+    height: 50%;
+    background-color: #F5ECE1;
+}
+
+.section {
+    display: flex;
+    height: 50%;
+}
+
+.box4 {
+    width: 50%;
+    background-color: #E4D6CA;
+}
+
+.box5 {
+    width: 50%;
+    background-color: #D5BEB1;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #D9D9D9;
+}
