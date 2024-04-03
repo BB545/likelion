@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header, .footer {
+    display: flex;
+    height: 100px;
+}
+
+.box1 {
+    width: 20%;
+    background-color: #54D8DC;
+}
+
+.box2 {
+    width: 80%;
+    background-color: #86DADC;
+}
+
+.main {
+    display: flex;
+    height: 880px;
+}
+
+.box3 {
+    width: 33%;
+    background-image: url(../img/Rectangle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box4 {
+    width: 34%;
+    background-image: url(../img/Rectangle2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box5 {
+    width: 33%;
+    background-image: url(../img/Rectangle3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box6 {
+    width: 20%;
+    background-color: #FDE1E0;
+}
+
+.foot_container {
+    display: block;
+    width: 80%;
+}
+
+.box7 {
+    height: 50px;
+    background-color: #FECECE;
+}
+
+.box8 {
+    height: 50px;
+    background-color: #FDB2B5;
+}
+
+@media (max-width: 680px) {
+    .header, .footer {
+        display: block;
+        height: 200px;
+    }
+
+    .box1,
+    .box2,
+    .box6 {
+        width: 100%;
+        height: 100px;
+    }
+
+    .main {
+        display: block;
+        height: 680px;
+    }
+
+    .box3,
+    .box5 {
+        width: 100%;
+        height: 225px;
+    }
+
+    .box4 {
+        width: 100%;
+        height: 230px;
+    }
+
+    .foot_container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+   .box6 {
+        height: 200px;
+    }
+
+    .box7,
+    .box8 {
+        display: none;
+    }
+}
