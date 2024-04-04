@@ -1,0 +1,212 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1250px;
+    height: 1080px;
+}
+
+.header,
+.foot {
+    display: flex;
+    height: 10%;
+}
+
+/* layout1 */
+
+.box1 {
+    width: 20%;
+    background-color: #EAE9EE;
+}
+
+.box2 {
+    width: 80%;
+    background-color: #C2C3D6;
+}
+
+.main1 {
+    height: 80%;
+}
+
+.sec1 {
+    width: 100%;
+    height: 50%;
+    background-color: #E1E1F5;
+}
+
+.sec2 {
+    display: flex;
+    height: 50%;
+}
+
+.box3 {
+    width: 50%;
+    height: 100%;
+    background-color: #CACBE4;
+}
+
+.box4 {
+    width: 50%;
+    height: 100%;
+    background-color: #B1B2D5;
+}
+
+.foot1 {
+    width: 100%;
+    background-color: #C2C5D6;
+}
+
+/* layout2 */
+
+.main2 {
+    height: 80%;
+    display: flex;
+}
+
+.sec5 {
+    display: block;
+    width: 80%;
+    height: 100%;
+}
+
+.art1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.box5 {
+    width: 30%;
+    background-color: #E1E1F5;
+}
+
+.art_box {
+    width: 70%;
+}
+
+.box6 {
+    height: 50%;
+    background-color: #C0C0FB;
+}
+
+.box7 {
+    height: 50%;
+    background-color: #9999EF;
+}
+
+.art2 {
+    height: 50%;
+    background-color: #B1B2D5;
+}
+
+.sec3 {
+    width: 20%;
+    height: 100%;
+    background-color: #7878D4;
+}
+
+.box8,
+.box10 {
+    width: 20%;
+    background-color: #3A258A;
+}
+
+.box9 {
+    width: 60%;
+    background-color: #6469CD;
+}
+
+/* layout3 */
+
+.main3 {
+    width: 100%;
+    height: 80%;
+}
+
+.sec4 {
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.art3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.art4 {
+    width: 10%;
+    background-color: #7878D4;
+}
+
+.art5 {
+    width: 30%;
+    background-color: #B1B2D5;
+}
+
+.art6 {
+    width: 60%;
+    background-color: #CACBE4;
+}
+
+/* layout4 */
+
+.art9 {
+    display: block;
+    width: 70%;
+    height: 100%
+}
+
+.art_box2 {
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.box11 {
+    width: 70%;
+    background-color: #C0C0FB;
+}
+
+.box12 {
+    width: 30%;
+    background-color: #7878D4;
+}
+
+.box13 {
+    width: 30%;
+    background-color: #9999EF;
+}
+
+.box14 {
+    width: 70%;
+    background-color: #CACBE4;
+}
+
+.art7 {
+    width: 10%;
+    background-color: #353AC2;
+}
+
+.art8 {
+    width: 10%;
+    background-color: #0D1163;
+}
+
+.box15 {
+    width: 100%;
+    height: 50%;
+    background-color: #666CEE;
+}
+
+.box16 {
+    width: 50%;
+    height: 100%;
+    background-color: #7D7FA7;
+}
+
+.box17 {
+    width: 50%;
+    height: 100%;
+    background-color: #4C4F8C;
+}
