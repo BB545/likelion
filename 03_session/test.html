@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/test.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="boxpo"></div>
+        <header class="header">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </header>
+        <main class="main">
+            <section class="sec1"></section>
+            <section class="sec2">
+                <div class="box3"></div>
+                <div class="box4"></div>
+            </section>
+        </main>
+        <footer class="foot"></footer>
+    </div>
+
+    <script>
+        // 9
+        function noParameter(message) {
+            console.log(message);
+        }
+
+        noParameter('Hello, FE lion');
+
+        // 10
+        const info = ['Youngbok Lee', 25, "Idol", "Australia"];
+
+        const [name, age, job, city] = info; 
+
+        console.log(name); // Youngbok Lee
+        console.log(age); // 25
+        console.log(job); // Idol
+        console.log(city); // Australia
+    </script>
+</body>
+</html>
