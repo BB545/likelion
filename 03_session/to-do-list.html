@@ -48,7 +48,7 @@
 
                 const checkbox = document.createElement('input');
                 checkbox.setAttribute('type', 'checkbox');
-                checkbox.setAttribute('id', 'checkbox');
+                checkbox.setAttribute('id', `checkbox${Index}`);
 
                 const label = document.createElement('label');
                 label.setAttribute('for', `checkbox${Index}`);
@@ -60,7 +60,7 @@
                 deletebtn.innerHTML = `<img src="./assets/img/delete.svg" alt="delete button">`
 
                 deletebtn.addEventListener('click', (event)=>{
-                    event.currentTarget.parentNode.parentNode.removeChild(event.currentTarget.parentNode)
+                    event.currentTarget.parentNode.parentNode.removeChild(event.currentTarget.parentNode);
                 });
 
                 checkbox.addEventListener('change', ()=>{
@@ -80,8 +80,28 @@
 
                 Main.appendChild(list);
                 InputTodo.value = '';
-                index++;
+                Index++;
             })
+
+            document.querySelectorAll('.list').forEach((list) => {
+                const deletebtn = list.querySelector('button');
+                deletebtn.addEventListener('click', () => {
+                    list.remove(); // 클릭된 할 일 리스트 삭제
+                });
+            });
+
+            document.querySelectorAll('.list').forEach((list) => {
+                const checkbox = list.querySelector('input[type="checkbox"]');
+                const text = list.querySelector('p');
+
+                checkbox.addEventListener('change', () => {
+                    if (checkbox.checked) {
+                        text.style.textDecoration = 'line-through';
+                    } else {
+                        text.style.textDecoration = 'none';
+                    }
+                });
+            });
         })
     </script>
 </body>
