@@ -29,6 +29,7 @@
             Addbtn.addEventListener('click', ()=>{
                 if(input.value==''){
                     alert('시간을 입력하세요')
+                    return
                 }
 
                 // 생성된 div 삭제
@@ -41,6 +42,8 @@
                 Time.textContent = input.value;
 
                 timer.appendChild(Time);
+
+                input.value = '';
 
                 // time = setInterval('myTimer()',1000);
             })
