@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/timer.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="title">Timer</header>
+        <main class="main">
+            <section class="sec1">
+                <input type="text" placeholder="시간을 입력하세요 ( 00 : 00 )" class="input">
+                <button class="addbtn">
+                    <img src="./to-do-list/assets/img/plus.svg" alt="플러스 버튼">
+                </button>
+            </section>
+            <section class="timer"></section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const input = document.querySelector('.input')
+            const Addbtn = document.querySelector('.addbtn');
+            const timer = document.querySelector('.timer');
+
+            Addbtn.addEventListener('click', ()=>{
+                if(input.value==''){
+                    alert('시간을 입력하세요')
+                }
+
+                // 생성된 div 삭제
+                while (timer.firstChild) {
+                    timer.removeChild(timer.firstChild);
+                }
+
+                const Time = document.createElement('div');
+                Time.classList.add('time');
+                Time.textContent = input.value;
+
+                timer.appendChild(Time);
+
+                // time = setInterval('myTimer()',1000);
+            })
+
+            // function myTimer(){
+            //     // 입력값을 시간과 분으로 분리
+            //     const [hours, minutes] = input.value.split(':').map(num => parseInt(num));
+            // }
+        })
+    </script>
+</body>
+</html>
