@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/site.css">
+    <title>HB</title>
+</head>
+<body>
+    <header class="header">
+        <section class="logo">HB</section>
+        <section class="nav">
+            <ul class="nav_li">
+                <li class="li_item">Top</li>
+                <li class="li_item">Outer</li>
+                <li class="li_item">Pants</li>
+                <li class="li_item">Accessory</li>
+            </ul>
+        </section>
+    </header>
+    <div class="menu">
+        <div class="menuCon">
+            <ul class="menu_li menu1">
+                <li class="menu_item">블라우스</li>
+                <li class="menu_item">티</li>
+                <li class="menu_item">셔츠</li>
+                <li class="menu_item">니트</li>
+            </ul>
+            <ul class="menu_li menu2">
+                <li class="menu_item">자켓</li>
+                <li class="menu_item">코트</li>
+                <li class="menu_item">가디건</li>
+                <li class="menu_item">머플러</li>
+            </ul>
+            <ul class="menu_li menu3">
+                <li class="menu_item">청바지</li>
+                <li class="menu_item">짧은바지</li>
+                <li class="menu_item">긴바지</li>
+                <li class="menu_item">레깅스</li>
+            </ul>
+            <ul class="menu_li menu4">
+                <li class="menu_item">귀고리</li>
+                <li class="menu_item">목걸이</li>
+                <li class="menu_item">반지</li>
+                <li class="menu_item">팔찌</li>
+            </ul>
+        </div>
+    </div>
+    <main class="main">
+        <section class="sec1">
+            <div class="containImg">
+                <img src="./img/main1.png" alt="main1" class="mainImg">
+                <br>
+                <img src="./img/main2.png" alt="main2" class="mainImg">
+                <br>
+                <img src="./img/main3.png" alt="main3" class="mainImg">
+            </div>
+        </section>
+        <section class="sec2">
+            <article class="art1">
+                <div class="title">
+                    <div class="cont notice">공지사항</div>
+                    <div class="cont gallery">갤러리</div>
+                </div>
+                <div class="table table1">
+                    <ul class="cont_li">
+                        <li class="item item_txt">(주)성신기업 한복 제작 사업 시작</li>
+                        <li class="item">2024.04.03</li>
+                    </ul>
+                    <ul class="cont_li">
+                        <li class="item item_txt">성신여자대학교 (주)성신기업 MOU 체결</li>
+                        <li class="item">2024.04.02</li>
+                    </ul>
+                    <ul class="cont_li">
+                        <li class="item item_txt">반품/환불 규정 공지</li>
+                        <li class="item">2024.04.01</li>
+                    </ul>
+                    <ul class="cont_li">
+                        <li class="item item_txt">사이트를 처음 이용하시는 분들을 위해</li>
+                        <li class="item">2024.03.12</li>
+                    </ul>
+                    <ul class="cont_li">
+                        <li class="item item_txt">지속적인 건의에 대한 답변</li>
+                        <li class="item">2024.03.15</li>
+                    </ul>
+                </div>
+                <div class="table table2">
+                    <ul class="img_li">
+                        <li class="img_item"><img src="./img/gal1.png" alt="gal1"></li>
+                        <li class="img_item"><img src="./img/gal2.png" alt="gal2"></li>
+                        <li class="img_item"><img src="./img/gal3.png" alt="gal3"></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="art2">
+                <div class="art_img2"></div>
+                <div class="art_txt">banner</div>
+            </article>
+            <article class="art3">
+                <div class="art_img3"></div>
+                <div class="art_txt">shortcut</div>
+            </article>
+        </section>
+    </main>
+    <footer class="foot">
+        <section class="logo copy">HB</section>
+        <section class="copy">&copy; 2024 LOTTE SHOPPING CO. LTD. ALL RIGHTS RESERVED</section>
+        <section></section>
+    </footer>
+
+    <div class="popup">
+        <div class="pop_head">
+            &nbsp; (주)성신기업 한복 제작 사업 시작 
+        </div>
+        <div class="pop_main">
+            <div class="pop_txt">
+                계약금액은 약 12억 2천만 달러, 우리 돈으로 1조 6천억 원 규모이며 공사 기간은 41개월입니다.
+                <br><br>
+                '파딜리 가스 증설 프로그램'은 사우디아라비아 동부 주베일시에서 약 80km 떨어진 파딜리 유전 지역 공단 내에서 윤영하고 있는 기존 파딜리 가스플랜트의 용량을 확대하기 위해 발주된 공사로, GS건설은 하루 800톤 규모의 황을 회수할 수 있는 황회수시설 3기를 건설하게 됩니다.
+            </div>
+            <div class="pop_btn"><button type="button" class="popBtn">닫기</button></div>
+        </div>
+    </div>
+
+    <div class="pop_back"></div>
+
+    <script>
+        const nav = document.querySelector('.li_item');
+        const menu = document.querySelector('.menu');
+        const notice = document.querySelector('.notice');
+        const gallery = document.querySelector('.gallery');
+        const contlist = document.querySelectorAll('.item_txt');
+        const table1 = document.querySelector('.table1');
+        const table2 = document.querySelector('.table2');
+        const popup = document.querySelector('.popup');
+        const back = document.querySelector('.pop_back');
+        const popBtn = document.querySelector('.popBtn');
+
+        nav.addEventListener('click', ()=>{
+            menu.classList.toggle('show');
+        })
+
+        window.addEventListener('DOMContentLoaded', () => {
+            notice.style.background = '#444C61';
+            notice.style.color = '#F5E4EA';
+            table1.style.display = 'block';
+            back.style.background = 'rgba(0, 0, 0, 0.7)';
+            back.style.zIndex = '9998';
+            popup.style.display = 'block';
+
+
+            notice.addEventListener('click', () => {
+                notice.style.background = '#444C61';
+                notice.style.color = '#F5E4EA';
+                gallery.style.background = '';
+                gallery.style.color = '';
+                table2.style.display = 'none';
+                table1.style.display = 'block';
+            });
+
+            gallery.addEventListener('click', () => {
+                gallery.style.background = '#444C61';
+                gallery.style.color = '#F5E4EA';
+                notice.style.background = '';
+                notice.style.color = '';
+                table1.style.display = 'none';
+                table2.style.display = 'block';
+            });
+
+            popBtn.addEventListener('click', ()=>{
+                back.style.display = 'none';
+                popup.style.display = 'none';
+            })
+        });
+
+        contlist.forEach((contli)=>{
+            contli.addEventListener('click', ()=>{
+                contlist.forEach((li)=>{
+                    li.style.borderBottom = '';
+                });
+                contli.style.borderBottom = '1px solid #444C61'
+            })
+        })
+    </script>
+</body>
+</html>
