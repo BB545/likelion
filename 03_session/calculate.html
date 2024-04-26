@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/calculate.css">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form">
+        <table class="calculate" border="1">
+            <tr class="row row1">
+                <td colspan="4" class="col1"><input type="text" class="output" readonly></td>
+            </tr>
+            <tr class="row row2">
+                <td colspan="3" class="col col2"><input type="button" class="input" value="C" onclick="reset()"></td>
+                <td class="col colOrg col3"><input type="button" class="input" value="/" onclick="appendToOutput('/')"></td>
+            </tr>
+            <tr class="row row3">
+                <td class="col col4"><input type="button" class="input" value="1" onclick="appendToOutput('1')"></td>
+                <td class="col col5"><input type="button" class="input" value="2" onclick="appendToOutput('2')"></td>
+                <td class="col col6"><input type="button" class="input" value="3" onclick="appendToOutput('3')"></td>
+                <td class="col colOrg col7"><input type="button" class="input" value="*" onclick="appendToOutput('*')"></td>
+            </tr>
+            <tr class="row row4">
+                <td class="col col8"><input type="button" class="input" value="4" onclick="appendToOutput('4')"></td>
+                <td class="col col9"><input type="button" class="input" value="5" onclick="appendToOutput('5')"></td>
+                <td class="col col10"><input type="button" class="input" value="6" onclick="appendToOutput('6')"></td>
+                <td class="col colOrg col11"><input type="button" class="input" value="+" onclick="appendToOutput('+')"></td>
+            </tr>
+            <tr class="row row5">
+                <td class="col col12"><input type="button" class="input" value="7" onclick="appendToOutput('7')"></td>
+                <td class="col col13"><input type="button" class="input" value="8" onclick="appendToOutput('8')"></td>
+                <td class="col col14"><input type="button" class="input" value="9" onclick="appendToOutput('9')"></td>
+                <td class="col colOrg col15"><input type="button" class="input" value="-" onclick="appendToOutput('-')"></td>
+            </tr>
+            <tr class="row row6">
+                <td class="col col16"><input type="button" class="input" value="." onclick="appendToOutput('.')"></td>
+                <td class="col col17"><input type="button" class="input" value="0" onclick="appendToOutput('0')"></td>
+                <td colspan="2" class="col colOrg col18"><input type="button" class="input" value="=" onclick="calculate()"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function reset(){
+            document.querySelector('.output').remove();
+        }
+
+        function appendToOutput(value) {
+            document.querySelector('.output').value += value;
+        }
+
+        function calculate() {
+            var result = eval(document.querySelector('.output').value);
+            document.querySelector('.output').value = result;
+        }
+    </script>
+</body>
+</html>
