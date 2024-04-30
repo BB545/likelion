@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    /* height: ; */
+    background-color: #3b5999;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    text-align: center;
+}
+
+.word {
+    font-size: 100px;
+    color: #3b5999;
+}
+
+.info {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.info > div {
+    padding: 10px;
+}
+
+.time,
+.score {
+    font-size: 50px;
+}
+
+.btn {
+    width: 200px;
+    height: 35px;
+    justify-self: center;
+    background-color: #3b5999;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.load {
+    background-color: #ccc;
+    cursor: not-allowed;
+    border: none;
+}
+
+.input {
+    padding: 10px;
+}

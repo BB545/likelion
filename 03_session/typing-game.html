@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/typing-game.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <h2>타이핑 마스터!</h2>
+    </header>
+    <main class="main">
+        <div class="word">
+            Hello
+        </div>
+        <input type="text" class="input">
+        <div class="info">
+            <div>
+                남은 시간 : <span class="time">0</span>초
+            </div>
+            <div>
+                획득 점수 : <span class="score">0</span>점
+            </div>
+        </div>
+        <button class="btn load" onclick="run()">로딩중...</button>
+    </main>
+
+    <script>
+        const Time = 5;
+        let score = 0;
+        let time = Time;
+        let isPlaying = false;
+        let timeInterval;
+        let checkInterval;
+        let words = [];
+
+        const input = document.querySelector('.input');
+        const word = document.querySelector('.word');
+        const scoreV = document.querySelector('.score');
+        const timeV = document.querySelector('.time');
+        const btn = document.querySelector('.btn');
+
+        init();
+
+        function init(){
+            random();
+            input.addEventListener('input', check)
+        }
+        
+        function run() {
+            if(isPlaying){
+                return;
+            }
+            isPlaying = true;
+            time = Time;
+            input.focus();
+            score.innerText = 0;
+            timeInterval = setInterval(count, 1000);
+            checkInterval = setInterval(stat, 50);
+            button('게임 중')
+        }
+
+        function stat(){
+            if(isPlaying && time === 0){
+                button('게임 시작')
+                clearInterval(checkInterval)
+                isPlaying = false;
+            }
+        }
+
+        function random(){
+            words = ['Hello', 'Banana', 'Apple', 'LikeLion'];
+            button('게임 시작');
+        }
+        
+        function check(){
+            if(word.innerText.toLowerCase() === input.value.toLowerCase()){
+                input.value = '';
+                if(!isPlaying){
+                    return;
+                }
+                score++;
+                scoreV.innerText = score;
+                time = Time;
+                const Index = Math.floor(Math.random() * words.length);
+                word.innerText = words[Index]
+            }
+        }
+
+        function count(){
+            time > 0 ? time-- : isPlaying = false;
+            if(!isPlaying){
+                clearInterval(timeInterval)
+            }
+            timeV.innerText = time;
+        }
+
+        function button(text){
+            btn.innerText = text;
+            text === '게임 시작' ? btn.classList.remove('load') : btn.classList.add('load')
+        }
+    </script>
+</body>
+</html>
