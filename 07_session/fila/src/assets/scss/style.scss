@@ -31,26 +31,27 @@ ul {
         font-size: 50px;
         z-index: 10;
         padding: 10px 20px;
+        font-weight: bold;
     }
 
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff;
-    position: absolute;
-    top: auto;
-    bottom: 20px;
-    transform: translateY(0);
-    z-index: 10;
+    color: #fff !important;
+    position: absolute !important;
+    top: auto !important;
+    bottom: 20px !important;
+    transform: translateY(0) !important;
+    z-index: 10 !important;
 }
 
 .swiper-button-next {
-    right: 13%;
+    right: 13% !important;
 }
 
 .swiper-button-prev {
-    left: 80%;
+    left: 80% !important;
 }
 
 .custom-pagination {

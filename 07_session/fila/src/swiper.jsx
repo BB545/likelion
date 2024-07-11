@@ -114,12 +114,12 @@ const SwiperComponent = () => {
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        style={{ backgroundColor: 'white', height: '400px', paddingTop: '60px' }}
+                        style={{ backgroundColor: 'white', height: '600px', paddingTop: '60px' }}
                     >
                         {coldTs.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <img src={item.src} alt={`slide-${index}`} style={{ width: '200px', height: '266px' }} />
-                                <div className="slide-title">{item.title}</div>
+                                <img src={item.src} alt={`slide-${index}`} style={{ width: '345px', height: '460px' }} />
+                                <div className="slide-title" style={{fontSize: '16px', fontWeight: 'bold', padding: '10px 0'}}>{item.title}</div>
                                 <div className="slide-title">{item.price}</div>
                             </SwiperSlide>
                         ))}
@@ -137,12 +137,12 @@ const SwiperComponent = () => {
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        style={{ backgroundColor: 'white', height: '400px', paddingTop: '60px' }}
+                        style={{ backgroundColor: 'white', height: '600px', paddingTop: '60px' }}
                     >
                         {shoes.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <img src={item.src} alt={`slide-${index}`} style={{ width: '200px', height: '266px' }} />
-                                <div className="slide-title">{item.title}</div>
+                                <img src={item.src} alt={`slide-${index}`} style={{ width: '345px', height: '460px' }} />
+                                <div className="slide-title" style={{fontSize: '16px', fontWeight: 'bold', padding: '10px 0'}}>{item.title}</div>
                                 <div className="slide-title">{item.price}</div>
                             </SwiperSlide>
                         ))}
@@ -160,12 +160,12 @@ const SwiperComponent = () => {
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        style={{ backgroundColor: 'white', height: '400px', paddingTop: '60px' }}
+                        style={{ backgroundColor: 'white', height: '600px', paddingTop: '60px' }}
                     >
                         {shortTs.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <img src={item.src} alt={`slide-${index}`} style={{ width: '200px', height: '266px' }} />
-                                <div className="slide-title">{item.title}</div>
+                                <img src={item.src} alt={`slide-${index}`} style={{ width: '345px', height: '460px' }} />
+                                <div className="slide-title" style={{fontSize: '16px', fontWeight: 'bold', padding: '10px 0'}}>{item.title}</div>
                                 <div className="slide-title">{item.price}</div>
                             </SwiperSlide>
                         ))}
@@ -183,12 +183,12 @@ const SwiperComponent = () => {
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        style={{ backgroundColor: 'white', height: '400px', paddingTop: '60px' }}
+                        style={{ backgroundColor: 'white', height: '600px', paddingTop: '60px' }}
                     >
                         {sands.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <img src={item.src} alt={`slide-${index}`} style={{ width: '200px', height: '266px' }} />
-                                <div className="slide-title">{item.title}</div>
+                                <img src={item.src} alt={`slide-${index}`} style={{ width: '345px', height: '460px' }} />
+                                <div className="slide-title" style={{fontSize: '16px', fontWeight: 'bold', padding: '10px 0'}}>{item.title}</div>
                                 <div className="slide-title">{item.price}</div>
                             </SwiperSlide>
                         ))}
@@ -206,12 +206,12 @@ const SwiperComponent = () => {
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        style={{ backgroundColor: 'white', height: '400px', paddingTop: '60px' }}
+                        style={{ backgroundColor: 'white', height: '600px', paddingTop: '60px' }}
                     >
                         {runs.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <img src={item.src} alt={`slide-${index}`} style={{ width: '200px', height: '266px' }} />
-                                <div className="slide-title">{item.title}</div>
+                                <img src={item.src} alt={`slide-${index}`} style={{ width: '345px', height: '460px' }} />
+                                <div className="slide-title" style={{fontSize: '16px', fontWeight: 'bold', padding: '10px 0'}}>{item.title}</div>
                                 <div className="slide-title">{item.price}</div>
                             </SwiperSlide>
                         ))}
@@ -223,7 +223,7 @@ const SwiperComponent = () => {
     };
 
     return (
-        <div style={{ position: 'relative', top: '900px' }}>
+        <div style={{ position: 'relative', top: '20px' }}>
             <h2 style={{ textAlign: 'center' }}>지금 많이 찾는 상품</h2>
             <ul>
                 <li onClick={() => setActiveIndex(0)}># 냉감티셔츠</li>
