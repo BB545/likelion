@@ -24,7 +24,7 @@ const Article = ({ title, content }) => {
                 <div>
                     <div>
                         <img src={Comment} alt="" />
-                        <p>0</p>
+                        <p>{comment.length}</p>
                     </div>
                     {click ? (
                         <div>
