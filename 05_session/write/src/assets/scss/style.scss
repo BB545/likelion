@@ -161,11 +161,12 @@ body {
         display: flex;
         justify-content: space-between;
 
-        input, button {
+        input,
+        button {
             font-size: 16px;
             border-radius: 15px;
             font-weight: 600;
-        } 
+        }
 
         input {
             outline: none;
@@ -185,8 +186,21 @@ body {
             border: 0;
         }
     }
+
+    .commentBox {
+        font-size: 16px;
+        border-radius: 15px;
+        font-weight: 600;
+        outline: none;
+        border: 3px solid #92CAFF;
+        padding: 10px 20px;
+        width: 90%;
+        color: #92CAFF;
+        margin-top: 20px;
+    }
 }
 
-input, textarea {
+input,
+textarea {
     color: #49A1F1;
 }

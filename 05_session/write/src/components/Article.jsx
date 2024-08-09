@@ -5,6 +5,15 @@ import HeartFull from '../assets/img/heartfull.svg'
 
 const Article = ({ title, content }) => {
     const [click, setClick] = useState(false);
+    const [commentTxt, setCommentTxt] = useState('');
+    const [comment, setComment] = useState([]);
+
+    const handleComments = () => {
+        if (commentTxt.length > 0) {
+            setComment((prev) => [...prev, commentTxt]);
+            setCommentTxt('');
+        }
+    }
 
     return (
         <div className='article_wrap'>
@@ -31,9 +40,16 @@ const Article = ({ title, content }) => {
                 </div>
             </div>
             <div className="comment">
-                <input type="text" placeholder='댓글을 입력해주세요!' />
-                <button>등록</button>
+                <input type="text" placeholder='댓글을 입력해주세요!' value={commentTxt} onChange={(e) => setCommentTxt(e.target.value)} />
+                <button onClick={handleComments}>등록</button>
             </div>
+            {comment.length > 0 ? comment.map((com) => (
+                <div className='commentBox'>
+                    {com}
+                </div>
+            )) : (
+                <div style={{textAlign: "center"}}>작성된 댓글이 없습니다.</div>
+            ) }
         </div>
     )
 }
