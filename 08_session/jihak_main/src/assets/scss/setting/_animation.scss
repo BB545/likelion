@@ -1,0 +1,92 @@
+@keyframes wobbling {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes main-block {
+    0% {
+        background-color: #EEE;
+    border-top-right-radius: 75%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    }
+    10% {
+        background-color: #FFCF00;
+        border-bottom-left-radius: 75%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    28% {
+        background-color: #FFCF00;
+        border-bottom-left-radius: 75%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    38% {
+        background-color: #eee;
+        border-bottom-right-radius: 75%;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    56% {
+        background-color: #eee;
+        border-bottom-right-radius: 75%;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    66% {
+        background-color: #FFCF00;
+        border-top-left-radius: 75%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    84% {
+        background-color: #FFCF00;
+        border-top-left-radius: 75%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    94% {
+        background-color: #eee;
+        border-top-right-radius: 75%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    100% {
+        background-color: #eee;
+        border-top-right-radius: 75%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+$slide_img_animation : wobbling 2s linear infinite forwards 0.5s;
+$book_span_animation1 : main-block 10s ease-out infinite forwards 4s;
+$book_span_animation2 : main-block 10s ease-out infinite forwards 8s;
+$book_span_animation3 : main-block 10s ease-out infinite forwards 11s;
+$book_span_animation4 : main-block 10s ease-out infinite forwards 6s;
+$book_span_animation5 : main-block 10s ease-out infinite forwards 10s;
+$book_span_animation6 : main-block 10s ease-out infinite forwards 15s;
+$book_span_animation7 : main-block 10s ease-out infinite forwards 2s;

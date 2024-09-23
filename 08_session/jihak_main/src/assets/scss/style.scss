@@ -1,0 +1,883 @@
+@charset "UTF-8";
+
+// setting
+@import "setting/resets";
+@import "setting/common";
+@import "setting/font";
+@import "setting/utils";
+@import "setting/animation";
+
+body {
+    font-family: $font_body;
+    cursor: pointer;
+}
+
+// header
+.head_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    @include box_size(100%, 85px);
+    padding: 0 4%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 990;
+    background-color: #fff;
+    border-bottom: 1px solid #F0F0F0;
+
+    .head_logo {
+        @include box_size(139px, 45px);
+        background-image: url(https://textbook.jihak.co.kr/img/logo.svg);
+    }
+
+    .head_center_nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .head_center_li {
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            color: #111;
+
+            &:hover {
+                color: #FFCF00;
+                transition: all 0.2s ease-out;
+            }
+
+            &:not(:last-child) {
+                position: relative;
+                margin-right: 60px;
+            }
+        }
+    }
+
+    .head_right_nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .head_right_li {
+            display: flex;
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            color: #111;
+
+            &:hover {
+                color: #FFCF00;
+                transition: all 0.2s ease-out;
+            }
+
+            .head_right_li_item1 {
+                display: flex;
+                align-items: center;
+
+                >span {
+                    font-size: 10px;
+                    letter-spacing: -.5px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    padding: 0 6px;
+                    margin-left: 5px;
+                    background-color: #FFCF00;
+                    border-radius: 10px;
+                    border-bottom-left-radius: 0;
+                }
+
+                &:hover {
+                    color: #FFCF00;
+                    transition: all 0.2s ease-out;
+
+                    .head_right_li_item2 {
+                        color: #FFCF00;
+                        background-color: #111;
+                        transition: all 0.2s ease-out;
+                    }
+                }
+            }
+
+            &:not(:last-child) {
+                position: relative;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+// main1
+#wrapper {
+    overflow: hidden;
+}
+
+.main_container_1 {
+    position: relative;
+    height: 100vh;
+    max-height: 1080px;
+    padding-top: 150px;
+    padding-left: 4%;
+    max-width: 1920px;
+
+    .main_inner_container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 40px;
+
+        .inner_title_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 11;
+
+            .inner_title_box_title {
+                font-size: 60px;
+                line-height: 70px;
+                font-family: $font_title;
+            }
+
+            .inner_title_box_sub {
+                font-size: 18px;
+                margin-top: 25px;
+            }
+        }
+
+        .inner_left_slide {
+            width: 320px;
+            position: relative;
+            z-index: 11;
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+
+            .left_slide_top {
+                font-family: $font_slide_title;
+                @include box_size(320px, 20px);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .custom-pagination {
+                    @include box_size(80px, 20px);
+                    text-align: right;
+
+                    .swiper-pagination-bullet {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 0;
+                        background-color: #cecece;
+                        opacity: 1;
+                        transition: background-color 0.3s;
+                        margin-right: 0;
+
+                        &.bullet-effect1 {
+                            border-top-right-radius: 100%;
+                        }
+
+                        &.bullet-effect2 {
+                            border-top-left-radius: 100%;
+                        }
+
+                        &.bullet-effect3 {
+                            border-bottom-right-radius: 100%;
+                        }
+
+                        &.bullet-effect4 {
+                            border-bottom-left-radius: 100%;
+                        }
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        background-color: #FFCF00;
+                        transition: all 1s ease-out;
+                    }
+                }
+            }
+
+            #img1.animate .left_slide_box .left_slide_box_img {
+                transition: all 1s ease-out;
+                border-top-right-radius: 100%;
+            }
+
+            #img2.animate .left_slide_box .left_slide_box_img {
+                transition: all 1s ease-out;
+                border-top-left-radius: 100%;
+            }
+
+            #img3.animate .left_slide_box .left_slide_box_img {
+                transition: all 1s ease-out;
+                border-bottom-right-radius: 100%;
+            }
+
+            #img4.animate .left_slide_box .left_slide_box_img {
+                transition: all 1s ease-out;
+                border-bottom-left-radius: 100%;
+            }
+
+            .left_slide_box {
+                position: relative;
+
+                .left_slide_box_txt {
+                    font-size: 18px;
+                    line-height: 25px;
+                    margin-top: 30px;
+                    letter-spacing: -1px;
+                }
+
+                .left_slide_box_img {
+                    @include box_size(320px, 320px);
+                    margin-top: 15px;
+                    background-color: #FFCF00;
+                    position: relative;
+
+                    .left_slide_swiper_img1 {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        @include box_size(297px, 296px);
+                        background: url(https://textbook.jihak.co.kr/img/mpr-slimg1.png) no-repeat;
+                    }
+
+                    .left_slide_swiper_img2 {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        @include box_size(297px, 296px);
+                        background: url(https://textbook.jihak.co.kr/img/mpr-slimg2.png) no-repeat;
+                    }
+
+                    .left_slide_swiper_img3 {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        @include box_size(297px, 296px);
+                        background: url(https://textbook.jihak.co.kr/img/mpr-slimg3.png) no-repeat;
+                    }
+
+                    .left_slide_swiper_img4 {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 40px;
+                        left: 0;
+                        @include box_size(297px, 296px);
+                        background: url(https://textbook.jihak.co.kr/img/mpr-slimg4.png) no-repeat;
+                    }
+                }
+            }
+        }
+
+        .inner_right_slide {
+            @include box_size(900px, 650px);
+            position: relative;
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+
+            #img5,
+            #img6,
+            #img7,
+            #img8,
+            #img9,
+            #img10 {
+                @include box_size(900px, 650px);
+            }
+
+            #img5.animate .right_slide_box_img {
+                transform: scale(1);
+                transition-delay: 1s;
+                border-top-left-radius: 400px;
+                border-top-right-radius: 0;
+            }
+
+            #img6.animate .right_slide_box_img {
+                transform: scale(1);
+                transition-delay: 1s;
+                border-top-left-radius: 400px;
+                border-top-right-radius: 0;
+            }
+
+            #img7.animate .right_slide_box_img {
+                transform: scale(1);
+                transition-delay: 1s;
+                border-top-left-radius: 400px;
+                border-top-right-radius: 0;
+            }
+
+            #img8.animate .right_slide_box_img {
+                transform: scale(1);
+                transition-delay: 1s;
+                border-top-left-radius: 400px;
+                border-top-right-radius: 0;
+            }
+
+            #img9.animate .right_slide_box_img {
+                transform: scale(1);
+                transition-delay: 1s;
+                border-top-left-radius: 400px;
+                border-top-right-radius: 0;
+            }
+
+            #img10.animate .right_slide_box_img {
+                transform: scale(1);
+                transition-delay: 1s;
+                border-top-left-radius: 400px;
+                border-top-right-radius: 0;
+            }
+
+            .right_slide_box_img {
+                @include box_size(900px, 650px);
+                margin-top: 15px;
+                background-color: #cecece;
+                position: relative;
+                border-top-left-radius: 200px;
+                border-top-right-radius: 150px;
+                overflow: hidden;
+                transition: all 2.5s ease-out;
+
+                .right_slide_swiper_img1 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 40px;
+                    @include box_size(318px, 185px);
+                    background: url(https://textbook.jihak.co.kr/img/img_mvcha1.png) no-repeat;
+                    animation: $slide_img_animation;
+                }
+
+                .right_slide_swiper_img2 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 40px;
+                    @include box_size(260px, 235px);
+                    background: url(https://textbook.jihak.co.kr/img/img_mvcha2.png) no-repeat;
+                    animation: $slide_img_animation;
+                }
+
+                .right_slide_swiper_img3 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 40px;
+                    @include box_size(358px, 280px);
+                    background: url(https://textbook.jihak.co.kr/img/img_mvcha3.png) no-repeat;
+                    animation: $slide_img_animation;
+                }
+
+                .right_slide_swiper_img4 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 40px;
+                    @include box_size(293px, 280px);
+                    background: url(https://textbook.jihak.co.kr/img/img_mvcha4.png) no-repeat;
+                    animation: $slide_img_animation;
+                }
+
+                .right_slide_swiper_img5 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 40px;
+                    @include box_size(243px, 288px);
+                    background: url(https://textbook.jihak.co.kr/img/img_mvcha5.png) no-repeat;
+                    animation: $slide_img_animation;
+                }
+
+                .right_slide_swiper_img6 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 40px;
+                    @include box_size(250px, 210px);
+                    background: url(https://textbook.jihak.co.kr/img/img_mvcha6.png) no-repeat;
+                    animation: $slide_img_animation;
+                }
+
+                .right_slide_swiper_back_img1 {
+                    @include box_size(100%, 100%);
+                    background: url(https://textbook.jihak.co.kr/img/bg_mvsimg1.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                .right_slide_swiper_back_img2 {
+                    @include box_size(100%, 100%);
+                    background: url(https://textbook.jihak.co.kr/img/bg_mvsimg2.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                .right_slide_swiper_back_img3 {
+                    @include box_size(100%, 100%);
+                    background: url(https://textbook.jihak.co.kr/img/bg_mvsimg3.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                .right_slide_swiper_back_img4 {
+                    @include box_size(100%, 100%);
+                    background: url(https://textbook.jihak.co.kr/img/bg_mvsimg4.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                .right_slide_swiper_back_img5 {
+                    @include box_size(100%, 100%);
+                    background: url(https://textbook.jihak.co.kr/img/bg_mvsimg5.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                .right_slide_swiper_back_img6 {
+                    @include box_size(100%, 100%);
+                    background: url(https://textbook.jihak.co.kr/img/bg_mvsimg6.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+// badge
+.btn_container {
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    z-index: 20;
+
+    .click_btn {
+        @include box_size(50px, 50px);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all .2s ease-out;
+        color: #111;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .copy_link_btn {
+        background-color: #FFCF00;
+
+        .copy_link {
+            @include box_size(26px, 26px);
+            background: url(https://textbook.jihak.co.kr/img/as-link.svg
+) no-repeat;
+        }
+    }
+
+    .up_btn {
+        background-color: #fff;
+        border: 1px solid #f1f1f1;
+
+        .click_up {
+            @include box_size(16px, 10px);
+            background: url(https://textbook.jihak.co.kr/img/as-top.svg
+) no-repeat;
+        }
+    }
+}
+
+// main2
+.book_container {
+    padding-top: 180px;
+    width: 100%;
+    max-width: 1920px;
+
+    .book_sec1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 90px;
+        padding: 0 4%;
+
+        .booK_sec1_txt {
+            .book_sec1_txt_badge {
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 39px;
+                padding: 0 22px;
+                background-color: #FFCF03;
+                border-radius: 20px;
+                border-bottom-left-radius: 0;
+            }
+
+            .book_sec1_txt_title {
+                font-size: 60px;
+                line-height: 70px;
+                margin-top: 20px;
+                word-break: keep-all;
+                font-family: $font_title;
+            }
+
+            .book_sec1_txt_sub {
+                font-size: 20px;
+                line-height: 32px;
+                margin-top: 40px;
+                word-break: keep-all;
+            }
+        }
+
+        .book_sec1_list {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .book_sec1_list_item {
+                min-width: 120px;
+                padding: 22px 35px;
+                border-radius: 15px;
+                background-color: #FFF7E2;
+                border: 1px solid #FFE08D;
+                cursor: pointer;
+                text-align: center;
+                transition: all .2s ease-out;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    background-color: #FFCF00;
+                    border-color: #FFCF00;
+
+                    .list_item_1 {
+                        background: url(https://textbook.jihak.co.kr/img/mtab-suhak-on.png) no-repeat center center;
+                    }
+
+                    .list_item_2 {
+                        background: url(https://textbook.jihak.co.kr/img/mtab-sahui-on.png) no-repeat center center;
+                    }
+
+                    .list_item_3 {
+                        background: url(https://textbook.jihak.co.kr/img/mtab-gwahak-on.png) no-repeat center center;
+                    }
+
+                    .list_item_4 {
+                        background: url(https://textbook.jihak.co.kr/img/mtab-eumak-on.png) no-repeat center center;
+                    }
+
+                    .list_item_5 {
+                        background: url(https://textbook.jihak.co.kr/img/mtab-misul-on.png) no-repeat center center;
+                    }
+
+                    .list_item_6 {
+                        background: url(https://textbook.jihak.co.kr/img/mtab-cheyook-on.png) no-repeat center center;
+                    }
+                }
+
+                >span {
+                    display: block;
+                    margin: 0 auto;
+                    width: 50px;
+                    height: 40px;
+                    margin-bottom: 11px;
+                    transition: all .2s ease-out;
+                }
+
+                .list_item_1 {
+                    background: url(https://textbook.jihak.co.kr/img/mtab-suhak.png) no-repeat center center;
+                }
+
+                .list_item_2 {
+                    background: url(https://textbook.jihak.co.kr/img/mtab-sahui.png) no-repeat center center;
+                }
+
+                .list_item_3 {
+                    background: url(https://textbook.jihak.co.kr/img/mtab-gwahak.png) no-repeat center center;
+                }
+
+                .list_item_4 {
+                    background: url(https://textbook.jihak.co.kr/img/mtab-eumak.png) no-repeat center center;
+                }
+
+                .list_item_5 {
+                    background: url(https://textbook.jihak.co.kr/img/mtab-misul.png) no-repeat center center;
+                }
+
+                .list_item_6 {
+                    background: url(https://textbook.jihak.co.kr/img/mtab-cheyook.png) no-repeat center center;
+                }
+            }
+        }
+    }
+
+    .book_sec2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        .book_sec2_list {
+            width: calc(100% / 8);
+            height: auto;
+
+            >span {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-top-right-radius: 75%;
+                background-color: #eee;
+            }
+
+            .list_effect1 {
+                animation: $book_span_animation1;
+            }
+
+            .list_effect2 {
+                animation: $book_span_animation2;
+            }
+
+            .list_effect3 {
+                animation: $book_span_animation3;
+            }
+
+            .list_effect4 {
+                animation: $book_span_animation4;
+            }
+
+            .list_effect5 {
+                animation: $book_span_animation5;
+            }
+
+            .list_effect6 {
+                animation: $book_span_animation6;
+            }
+
+            .list_effect7 {
+                animation: $book_span_animation7;
+            }
+
+            .list_item {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+
+                &:hover {
+                    .list_item_shadow {
+                        height: 100%;
+                    }
+
+                    .list_item_btn {
+                        opacity: 1;
+                        top: 50%;
+                        transition-delay: .3s;
+                    }
+                }
+
+                >img {
+                    width: 100% !important;
+                    height: 100% !important;
+                    max-width: 480px;
+                    max-height: 620px;
+                }
+
+                .list_item_shadow {
+                    position: absolute;
+                    display: block;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    background-color: rgba(17, 17, 17, .3);
+                    transition: all .4s ease-out;
+                }
+
+                .list_item_btn {
+                    position: absolute;
+                    display: inline-block;
+                    top: 55%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: max-content;
+                    font-size: 15px;
+                    color: #fff;
+                    font-weight: 600;
+                    line-height: 42px;
+                    padding: 0 20px;
+                    border-radius: 10px;
+                    background-color: #111;
+                    z-index: 10;
+                    opacity: 0;
+                    transition: all .2s ease-out;
+
+                    &:hover {
+                        color: #111;
+                        background-color: #FFCF00;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// main3
+.book_container2 {
+    @extend .book_container;
+    margin-bottom: 180px;
+
+    .text_right {
+        text-align: right;
+    }
+
+    .right_badge {
+        border-radius: 20px !important;
+        border-bottom-right-radius: 0 !important;
+    }
+}
+
+// footer
+.footer_container {
+    background-color: #333;
+
+    .foot_banner {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+
+        .banner_item_1 {
+            position: relative;
+            width: 50%;
+            padding: 45px 0 45px 250px;
+            background-color: #FFCF00;
+
+            .banner_img_1 {
+                position: absolute;
+                display: block;
+                left: 50px;
+                transition: all .2s ease-out;
+                top: -43px;
+                width: 183px;
+                height: 223px;
+                background: url(https://textbook.jihak.co.kr/img/cha-foot1.svg) no-repeat;
+                background-size: contain;
+            }
+
+            .banner_title_1 {
+                font-size: 25px;
+                line-height: 35px;
+                letter-spacing: -.5px;
+            }
+
+            .banner_sub_1 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 20px;
+
+                .banner_sub_1_txt {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .banner_sub_1_next {
+                    display: block;
+                    width: 15px;
+                    height: 12px;
+                    background: url(https://textbook.jihak.co.kr/img/ft-arrow.svg) no-repeat;
+                    background-size: contain;
+                    margin-left: 10px;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+
+        .banner_item_2 {
+            position: relative;
+            width: 50%;
+            padding: 45px 0 45px 250px;
+            background-color: #eeeeee;
+
+            .banner_img_2 {
+                position: absolute;
+                display: block;
+                left: 50px;
+                transition: all .2s ease-out;
+                top: -43px;
+                width: 183px;
+                height: 223px;
+                background: url(https://textbook.jihak.co.kr/img/cha-foot2.svg) no-repeat;
+                background-size: contain;
+            }
+
+            .banner_title_2 {
+                font-size: 25px;
+                line-height: 35px;
+                letter-spacing: -.5px;
+            }
+
+            .banner_sub_2 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 20px;
+
+                .banner_sub_2_txt {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .banner_sub_2_next {
+                    display: block;
+                    width: 15px;
+                    height: 12px;
+                    background: url(https://textbook.jihak.co.kr/img/ft-arrow.svg) no-repeat;
+                    background-size: contain;
+                    margin-left: 10px;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+    }
+
+    .foot_info {
+        width: 100%;
+        background-color: #333;
+
+        .info_inner {
+            position: relative;
+            z-index: 11;
+            width: 1240px;
+            margin: 0 auto;
+            padding: 43px 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .foot_logo {
+                display: block;
+                width: 139px;
+                height: 45px;
+                background: url(https://textbook.jihak.co.kr/img/logo-wh.svg) no-repeat;
+                background-size: contain;
+                margin-right: 40px;
+            }
+
+            .foot_info_txt {
+                padding-left: 40px;
+                border-left: 1px solid #444;
+                font-size: 14px;
+                color: #aaa;
+                line-height: 22px;
+            }
+        }
+    }
+}
