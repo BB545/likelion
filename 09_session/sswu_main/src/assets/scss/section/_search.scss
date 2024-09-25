@@ -159,6 +159,11 @@
         overflow-y: scroll;
         transition: transform 0.3s ease-in-out;
 
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
         >h2 {
             font-size: 18px;
             font-weight: bold;
