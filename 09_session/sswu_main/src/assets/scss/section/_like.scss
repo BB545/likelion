@@ -1,0 +1,12 @@
+.Like_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    .login {
+        color: #6A6FB3;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
