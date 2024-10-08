@@ -1,0 +1,46 @@
+@import '../setting/utils';
+@import '../setting/variables';
+
+#header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    width: 100vw;
+    max-height: 48px;
+    position: fixed;
+    top: 0;
+
+    #tossbank_logo {
+        @include size(118px, 20px);
+    }
+
+    #header_start_btn {
+        font-size: 11px;
+        font-weight: 600;
+        color: $toss_nav_color;
+        border: 1px solid $toss_nav_color;
+        border-radius: 40px;
+        line-height: 1.6;
+        padding: 4px 10px;
+    }
+}
+
+#nav_container {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+
+    #header_nav {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 633px;
+
+        .header_nav_list {
+            font-size: 15px;
+            font-weight: 500;
+            color: $toss_nav_color;
+        }
+    }
+}
