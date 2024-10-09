@@ -64,28 +64,30 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+span {
     font-weight: normal;
+    line-height: 1.6;
 }
 
 h1 {
-    font-size: 26px;
+    font-size: 56px;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 48px;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 36px;
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 32px;
 }
 
 h5 {
-    font-size: 14px;
+    font-size: 24px;
 }
 
 ul {
@@ -104,6 +106,10 @@ strong {
 img {
     vertical-align: top;
     width: 100%;
+}
+
+span {
+    font-size: 15px;
 }
 
 // 디자인 초기화
