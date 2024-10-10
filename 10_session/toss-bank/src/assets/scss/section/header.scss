@@ -1,17 +1,35 @@
 @import '../setting/utils';
 @import '../setting/variables';
 
+#header_backdrop {
+    @include size(100vw, 100vh);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s linear, max-height 1s ease;
+}
+
 #header_container {
     padding: 0 24px;
     width: 100vw;
     position: fixed;
     top: 0;
+    z-index: 10;
+    overflow: hidden;
+    transition: background-color 0.3s ease, max-height 0.5s ease;
 
     #header_container_top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-height: 48px;
+        backdrop-filter: blur(40px);
+        position: relative;
+        z-index: 10;
     }
 
     #tossbank_logo {
@@ -44,29 +62,36 @@
             font-weight: 500;
             color: $toss_nav_color;
         }
+
+        #header_nav_list_active {
+            color: $toss_nav_list_active;
+        }
     }
 }
 
+.toggle_active {
+    opacity: 1 !important;
+    max-height: 100% !important;
+}
+
 #header_toggle {
-    // opacity: 0;
+    opacity: 0;
     width: 100%;
+    max-height: 48px;
     padding: 24px 0 72px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    transition: opacity 0.3s linear;
 
-    #left2,
-    #left3,
-    #left4,
-    #left5,
-    #left6,
-    #left7,
-    #left8,
-    #left9 {
-        display: none;
+    .toggle_left_active {
+        display: block !important;
     }
 
     .header_toggle_left {
         width: 118px;
+        display: none;
 
         .left_under {
             display: flex;
@@ -85,20 +110,14 @@
         }
     }
 
+    .toggle_mid_active {
+        display: block !important;
+    }
+
     #header_toggle_mid {
         gap: 80px;
         width: 633px;
-
-        #mid2,
-        #mid3,
-        #mid4,
-        #mid5,
-        #mid6,
-        #mid7,
-        #mid8,
-        #mid9 {
-            display: none;
-        }
+        display: none;
 
         .header_toggle_mid_list {
             width: 100%;
@@ -111,11 +130,22 @@
 
                 .mid_list_under_item {
                     min-width: fit-content;
-                    
+
                     >span {
                         display: flex;
                         flex-direction: column;
                         padding-bottom: 8px;
+                        color: $toss_mid_list_under_span_color;
+                        font-size: $font_small;
+                        font-weight: 500;
+                    }
+
+                    >p {
+                        padding: 12px 0;
+                        font-size: $font_h7;
+                        font-weight: 700;
+                        color: $toss_nav_a;
+                        cursor: pointer;
                     }
                 }
             }
