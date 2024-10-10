@@ -1,10 +1,11 @@
 import React from 'react'
+import Main1 from '../components/main_section/Main1'
 
 const Main = () => {
   return (
-    <div>
-        
-    </div>
+    <main id='main_container'>
+        <Main1 />
+    </main>
   )
 }
 
