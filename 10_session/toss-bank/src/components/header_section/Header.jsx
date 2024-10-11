@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import tossbank from '../../assets/images/logo/TossBank_Logo.svg'
 import NavToggle from './NavToggle';
 
@@ -36,6 +36,22 @@ const Header = () => {
       headerContainerRef.current.style.backgroundColor = 'transparent';
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 350) {
+        headerContainerRef.current.style.backgroundColor = '#fff';
+      } else {
+        headerContainerRef.current.style.backgroundColor = 'transparent';
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [])
 
   return (
     <>
