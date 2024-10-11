@@ -1,0 +1,47 @@
+@keyframes colorChange {
+    0% {
+        color: rgb(0, 206, 53);
+    }
+
+    10% {
+        color: rgb(1, 178, 161);
+    }
+
+    20% {
+        color: rgb(0, 220, 0);
+    }
+
+    30% {
+        color: rgb(1, 161, 227);
+    }
+
+    40% {
+        color: rgb(0, 220, 0);
+    }
+
+    50% {
+        color: rgb(0, 193, 105);
+    }
+
+    60% {
+        color: rgb(1, 172, 186);
+    }
+
+    70% {
+        color: rgb(1, 170, 192);
+    }
+
+    80% {
+        color: rgb(1, 188, 124);
+    }
+
+    90% {
+        color: rgb(0, 213, 25);
+    }
+
+    100% {
+        color: rgb(0, 206, 53);
+    }
+}
+
+$color_change : colorChange 6s linear forwards infinite;
