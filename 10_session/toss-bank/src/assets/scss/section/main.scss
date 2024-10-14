@@ -211,6 +211,39 @@
                 gap: 20px;
             }
         }
+
+        #main_2_span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #main_2_span_text {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                display: inline-block;
+                text-align: center;
+                color: $toss_main_gray;
+                width: 100%;
+            }
+        }
+
+        #main_2_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            #main_2_button_text {
+                color: $toss_nav_color;
+                background-color: $toss_btn_back;
+                border-radius: 32px;
+                font-weight: 600;
+                padding: 18px 24px;
+                line-height: 27px;
+                font-size: 17px;
+            }
+        }
     }
 }
 
@@ -227,6 +260,11 @@
 .empty3 {
     flex: 0 0 auto;
     height: 26px;
+}
+
+.empty4 {
+    flex: 0 0 auto;
+    height: 40px;
 }
 
 .card_container {
@@ -315,5 +353,9 @@
                 }
             }
         }
+    }
+
+    .card_img_single {
+        @include size(60px, 60px);
     }
 }

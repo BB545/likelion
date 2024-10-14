@@ -1,6 +1,4 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from "swiper/modules";
+import React, { useEffect, useRef } from 'react';
 import 'swiper/css';
 
 const MainCard = ({ index }) => {
@@ -160,12 +158,67 @@ const MainCard = ({ index }) => {
         'https://static.toss.im/png-icons/timeline/momstouch-fill.png',
         'https://static.toss.im/png-icons/securities/icn-sec-fill-SHAK.png',
         'https://static.toss.im/png-icons/timeline/downtowner-fill.png',
-        'https://static.toss.im/png-icons/timeline/downtowner-fill.png',
         'https://static.toss.im/png-icons/timeline/knotted-fill.png',
         'https://static.toss.im/2d-emojis/png/4x/u1F68C.png',
         'https://static.toss.im/2d-emojis/png/4x/u1F688.png',
         'https://static.toss.im/2d-emojis/png/4x/u1F695.png'
     ]
+
+    const card2SlideItems = [
+        'https://static.toss.im/png-icons/timeline/naverpay-fill.png',
+        'https://static.toss.im/png-icons/timeline/toss-fill.png',
+        'https://static.toss.im/png-icons/timeline/coupang.png',
+        'https://static.toss.im/png-icons/timeline/musinsa-fill.png',
+        'https://static.toss.im/png-icons/timeline/kurly-fill.png',
+        'https://static.toss.im/png-icons/timeline/ohouse-fill.png',
+        'https://static.toss.im/png-icons/timeline/kream-fill.png',
+        'https://static.toss.im/png-icons/timeline/ably-fill.png',
+        'https://static.toss.im/png-icons/timeline/zigzagpink-fill.png',
+        'https://static.toss.im/png-icons/timeline/logo_2.png',
+        'https://static.toss.im/png-icons/timeline/coupang_eats.png',
+        'https://static.toss.im/png-icons/timeline/yogiyo-fill.png',
+        'https://static.toss.im/png-icons/timeline/riotgames-symbol-fill.png',
+        'https://static.toss.im/png-icons/securities/icn-sec-fill-041140.png',
+        'https://static.toss.im/png-icons/securities/icn-sec-fill-251270.png',
+        'https://static.toss.im/png-icons/timeline/appstore-fill.png',
+        'https://static.toss.im/png-icons/timeline/playstore.png',
+        'https://static.toss.im/png-icons/timeline/naverwebtoon-fill.png',
+        'https://static.toss.im/png-icons/timeline/naverseries-fill.png',
+        'https://static.toss.im/png-icons/timeline/ridi_fill.png',
+        'https://static.toss.im/png-icons/timeline/millie-fill.png',
+        'https://static.toss.im/png-icons/securities/icn-sec-fill-NFLX.png',
+        'https://static.toss.im/png-icons/timeline/disneyplus-fill.png',
+        'https://static.toss.im/png-icons/timeline/wave-fill.png',
+        'https://static.toss.im/png-icons/timeline/youtube-fill.png',
+        'https://static.toss.im/png-icons/timeline/myrealtrip-fill.png',
+        'https://static.toss.im/png-icons/timeline/yanolja-fill.png',
+        'https://static.toss.im/png-icons/timeline/goodchoice-fill.png'
+    ]
+
+    const sliderRef = useRef(null);
+    const slideWidth = useRef(0);
+
+    useEffect(() => {
+        const slider = sliderRef.current;
+        if (!slider) return;
+        
+        slideWidth.current = slider.offsetWidth / card1SlideItems.length;
+        let start = 0;
+
+        const slide = () => {
+            start -= 1.5;
+            if (Math.abs(start) >= slideWidth.current * card1SlideItems.length) {
+                start = 0;
+            }
+            slider.style.transform = `translateX(${start}px)`;
+            requestAnimationFrame(slide);
+        };
+
+        slide();
+
+        return () => cancelAnimationFrame(slide);
+    }, []);
+
     return (
         <div className='card_container'>
             <span className="card_number">
@@ -201,27 +254,34 @@ const MainCard = ({ index }) => {
                 }
             </div>
             <div className="empty3"></div>
-            <div className="card_swiper_area">
-                <Swiper
-                    modules={[Autoplay]}
-                    loop={true}
-                    speed={100}
-                    autoplay={{
-                        delay: 100,
-                        disableOnInteraction: false,
-                    }}
-                    effect="fade"
-                    className='card_swiper_area_box'
-                >
-                    {card1SlideItems.map((item) => (
-                        <SwiperSlide className='swiper_img_area'>
-                            <div className="swiper_img_box">
-                                <img src={item} alt={item} className="swiper_img" />
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+            {index === 1 || index === 2 ?
+                <div className="card_swiper_area">
+                    <div className='card_swiper_area_box' ref={sliderRef}>
+                        {index === 1 ?
+                            card1SlideItems.concat(card1SlideItems).map((item) => (
+                                <div className='swiper_img_area'>
+                                    <div className="swiper_img_box">
+                                        <img src={item} alt={item} className="swiper_img" />
+                                    </div>
+                                </div>
+                            ))
+                            : ''
+                        }
+                        {index === 2 ?
+                            card2SlideItems.concat(card2SlideItems).map((item) => (
+                                <div className='swiper_img_area'>
+                                    <div className="swiper_img_box">
+                                        <img src={item} alt={item} className="swiper_img" />
+                                    </div>
+                                </div>
+                            ))
+                            : ''
+                        }
+                    </div>
+                </div> : ''
+            }
+            {index === 3 ? <img src="https://static.toss.im/3d/uE116-red-toss-bank.png" alt="https://static.toss.im/3d/uE116-red-toss-bank.png" className="card_img_single" /> : ''}
+            {index === 4 ? <img src="https://static.toss.im/3d-emojis/siback_face1.png" alt="https://static.toss.im/3d-emojis/siback_face1.png" className="card_img_single" /> : ''}
         </div>
     )
 }

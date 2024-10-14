@@ -42,6 +42,14 @@ const Main2 = () => {
                         <MainCard index={4} />
                     </div>
                 </section>
+                <div className="empty4"></div>
+                <div id="main_2_span">
+                    <span id="main_2_span_text">24년 8월 1일부터 25년 2월 28일까지</span>
+                </div>
+                <div className="empty2"></div>
+                <div id="main_2_button">
+                    <div id="main_2_button_text" className='btn'>혜택 자세히보기</div>
+                </div>
             </div>
         </div>
     )
