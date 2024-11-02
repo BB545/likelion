@@ -1,0 +1,102 @@
+@import '../../setting/utils';
+@import '../../setting/variables';
+@import '../../setting/animations';
+
+// main5
+
+#main_5_container {
+    background-color: $color_white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    #main_5_inner_container {
+        padding: 120px 52px 80px;
+        width: 100%;
+        max-width: 1140px;
+
+        #main_5_inner_section {
+            will-change: transform, opacity;
+            transition: transform 1000ms, opacity 1000ms;
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
+            width: 100%;
+
+            #inner_phone_box {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                #phone_box_1 {
+                    @include size(500px, 500px);
+                    position: relative;
+                    border-radius: 32px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    background-color: $color_white;
+
+                    #phone_box_video {
+                        position: relative;
+                        overflow: hidden;
+
+                        >img {
+                            position: absolute;
+                            left: 0px;
+                            right: 0px;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            z-index: -1;
+                            border-style: none;
+                        }
+
+                        #phone_video_mp4 {
+                            display: block;
+                            @include size(100%, 100%);
+                            mask-image: -webkit-radial-gradient(center, white, black);
+                            backface-visibility: hidden;
+                            object-fit: contain;
+                        }
+                    }
+                }
+
+                #phone_box_2 {
+                    @include size(500px, 500px);
+                    position: relative;
+                    border-radius: 32px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 0;
+
+                    #phone_box_content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 100%;
+
+                        >h2 {
+                            font-size: 40px;
+                            text-align: left;
+                            color: $toss_main_title_black;
+                            font-weight: 800;
+                            line-height: 1.3;
+                        }
+
+                        >p {
+                            font-size: 18px;
+                            text-align: left;
+                            color: $toss_nav_color;
+                            margin-top: 16px;
+                            margin-bottom: 70px;
+                            line-height: 1.3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
