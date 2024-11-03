@@ -6,6 +6,7 @@ import Main4 from '../components/main_section/Main4'
 import Main5 from '../components/main_section/Main5'
 import Main6 from '../components/main_section/Main6'
 import Main7 from '../components/main_section/Main7'
+import Main8 from '../components/main_section/Main8'
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
         <Main5 />
         <Main6 />
         <Main7 />
+        <Main8 />
     </main>
   )
 }
