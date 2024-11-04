@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const NavToggle = ({ navListIndex }) => {
     const toggleLeftLists = [
@@ -15,7 +16,7 @@ const NavToggle = ({ navListIndex }) => {
 
     const toggleMidLists = [
         [
-            { title: '은행소개', subItems: ['공시정보', '재무정보', '공고', '사업공고', '오시는 길'] },
+            { title: '은행소개', subItems: ['공시정보', '재무정보', '공고', '사업공고', <Link to="/about/location">오시는 길</Link>] },
             { title: '주주사소개', subItems: ['주주사소개'] },
             { title: '윤리강령', subItems: ['윤리강령'] },
         ],
