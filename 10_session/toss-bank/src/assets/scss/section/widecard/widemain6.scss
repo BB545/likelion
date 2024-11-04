@@ -1,0 +1,140 @@
+@import '../../setting/utils';
+@import '../../setting/variables';
+@import '../../setting/animations';
+
+//wide main6
+
+#wide_card_main_6_container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f2f4f6;
+
+    #wide_6_inner_container {
+        max-width: min(1100px, 100vw);
+
+        #wide_6_inner_ul {
+            background-color: #f2f4f6;
+            margin: 0;
+            width: 100%;
+            padding: 24px;
+            list-style: none;
+
+            #wide_6_inner_content {
+                #inner_6_blank_1 {
+                    flex: 0 0 auto;
+                    height: 40px;
+                }
+
+                #inner_6_box {
+                    display: flex;
+                    flex-direction: column;
+
+                    .inner_6_ul {
+                        color: $toss_nav_color;
+                        padding: 0px;
+                        margin: 8px 0;
+                        font-size: 15px;
+                        line-height: 1.5;
+                        list-style: none;
+
+                        >li {
+                            position: relative;
+                            padding-left: 24px;
+                            margin-top: 8px;
+
+                            >span {
+                                white-space: pre-wrap;
+                                line-height: 1.5;
+                            }
+
+                            &::before {
+                                content: "•";
+                                left: 0;
+                                width: 16px;
+                                text-align: center;
+                                color: #8b95a1;
+                                display: inline-block;
+                                position: absolute;
+                            }
+                        }
+                    }
+
+                    .inner_6_blank_3 {
+                        color: $toss_nav_color;
+                        max-width: 100%;
+                        margin: 4px 24px 16px;
+                        display: block;
+                        font-size: 17px;
+                        line-height: 1.5;
+                    }
+
+                    .inner_6_span {
+                        color: $toss_nav_color;
+                        max-width: 100%;
+                        margin: 4px 24px 16px;
+                        display: block;
+                        font-size: 17px;
+                        line-height: 1.5;
+
+                        >span {
+                            white-space: pre-wrap;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+
+                #inner_6_blank_2 {
+                    flex: 0 0 auto;
+                    height: 64px;
+                }
+            }
+
+            #wide_6_inner_etc {
+                color: $toss_nav_color;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 0;
+                margin-right: 0;
+                padding-bottom: 24px;
+                font-size: 13px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.inner_6_span_bold {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+#inner_6_span_box {
+    margin: 4px 24px 16px;
+    display: block;
+
+    .inner_6_list {
+        position: relative;
+        padding-left: 24px;
+
+        &:not(:first-child) {
+            margin-top: 8px;
+        }
+
+        >span {
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        &::before {
+            content: "•";
+            left: 0;
+            width: 16px;
+            text-align: center;
+            color: #8b95a1;
+            display: inline-block;
+            position: absolute;
+        }
+    }
+}

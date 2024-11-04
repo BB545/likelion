@@ -4,6 +4,7 @@ import WideCardMain2 from '../components/widecard_section/WideCardMain2'
 import WideCardMain3 from '../components/widecard_section/WideCardMain3'
 import WideCardMain4 from '../components/widecard_section/WideCardMain4'
 import WideCardMain5 from '../components/widecard_section/WideCardMain5'
+import WideCardMain6 from '../components/widecard_section/WideCardMain6'
 
 const WideCard = () => {
   return (
@@ -13,6 +14,7 @@ const WideCard = () => {
         <WideCardMain3 />
         <WideCardMain4 />
         <WideCardMain5 />
+        <WideCardMain6 />
     </main>
   )
 }

@@ -116,7 +116,7 @@
                                         line-height: 1.5;
                                     }
 
-                                    ::before {
+                                    &::before {
                                         content: "•";
                                         left: 0;
                                         width: 16px;
