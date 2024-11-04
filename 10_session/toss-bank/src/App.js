@@ -4,6 +4,7 @@ import Main from './pages/Main';
 import Footer from './components/footer_section/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RoadMap from './pages/RoadMap';
+import ShareHolders from './pages/ShareHolders';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about/location" element={<RoadMap />} />
+        <Route path="/about/shareholders" element={<ShareHolders />} />
       </Routes>
       <Footer />
     </BrowserRouter>
