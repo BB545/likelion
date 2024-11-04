@@ -20,12 +20,12 @@ const Main7 = () => {
         
         if (!slide) return;
         
-        slide2Width.current = slide.offsetWidth / main7SlideItems.length;
+        slide2Width.current = slide.offsetWidth / 2;
         let start = 0;
 
         const slideAction = () => {
             start -= 1.5;
-            if (Math.abs(start) >= slide2Width.current * main7SlideItems.length) {
+            if (Math.abs(start) >= slide2Width.current) {
                 start = 0;
             }
             slide.style.transform = `translateX(${start}px)`;
