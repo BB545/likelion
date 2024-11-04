@@ -39,7 +39,7 @@ const NavToggle = ({ navListIndex }) => {
         ],
         [
             { title: '카드', subItems: ['체크카드', '모임카드'] },
-            { title: '제휴 신용카드', subItems: ['하나카드 Wide'] },
+            { title: '제휴 신용카드', subItems: [<Link to="/card/widecard">하나카드 Wide</Link>] },
         ],
         [
             { title: '이용안내', subItems: ['공지사항', '자주 묻는 질문', '이용시간 안내', '금리 안내', '수수료 안내', 'ATM 이용 안내'] },
