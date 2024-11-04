@@ -1,0 +1,171 @@
+@import '../../setting/utils';
+@import '../../setting/variables';
+@import '../../setting/animations';
+
+//wide main5
+
+#wide_card_main_5_container {
+    #wide_5_inner_container {
+        #blank_15 {
+            flex: 0 0 auto;
+            height: 40px;
+        }
+
+        #wide_5_inner_toggle_area {
+            display: flex;
+            flex-direction: column;
+
+            #wide_5_inner_toggle_box {
+                max-width: 1140px;
+                align-self: center;
+                margin-bottom: 16px;
+                width: 100%;
+
+                #wide_5_inner_toggle {
+                    will-change: transform, opacity;
+                    transition: transform 1000ms, opacity 1000ms;
+                    opacity: 1;
+                    transform: translate3d(0px, 0px, 0px);
+
+                    .wide_5_list_toggle {
+                        align-items: center;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 19px 18px;
+                        border-radius: 8px;
+                        background-color: rgb(242, 244, 246);
+
+                        >span {
+                            font-weight: 600;
+                            font-size: $font_h7;
+                            line-height: 1.6;
+                            color: $toss_nav_color;
+                        }
+
+                        .wide_5_toggle_icon_box.open {
+                            transform: rotate(180deg);
+                        }
+
+                        .wide_5_toggle_icon_box {
+                            display: flex;
+                            transform-origin: center center;
+                            transform: none;
+                            transition: transform 0.3s ease;
+
+                            .wide_5_toggle_icon {
+                                @include size(24px, 24px);
+                                min-width: 24px;
+                                font-size: inherit;
+
+                                >svg {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    .wide_5_list_toggle_content.open {
+                        height: auto;
+                        opacity: 1;
+                    }
+
+                    .wide_5_list_toggle_content {
+                        height: 0px;
+                        opacity: 0;
+                        width: 100%;
+                        max-width: 1140px;
+                        overflow: hidden;
+                        transition: height 1s ease, opacity 1s ease;
+
+                        .wide_5_toggle_content_box {
+                            padding: 24px 18px;
+                            margin-top: 8px;
+                            background-color: rgb(249, 250, 251);
+                            border-radius: 8px;
+
+                            .wide_5_toggle_span {
+                                display: block;
+                                font-size: 15px;
+                                line-height: 24px;
+                                color: rgb(78, 89, 104);
+                                margin-bottom: 24px;
+                                list-style-position: outside;
+
+                                >span {
+                                    white-space: pre-wrap;
+                                    font-weight: bold;
+                                    line-height: 1.5;
+                                }
+                            }
+
+                            .wide_5_toggle_ul {
+                                margin: 0px;
+                                padding: 0 24px 24px;
+                                list-style: none;
+                                color: $toss_nav_color;
+                                font-size: 16px;
+                                line-height: 1.5;
+
+                                >li {
+                                    position: relative;
+                                    padding-left: 24px;
+
+                                    >span {
+                                        white-space: pre-wrap;
+                                        line-height: 1.5;
+                                    }
+
+                                    ::before {
+                                        content: "•";
+                                        left: 0;
+                                        width: 16px;
+                                        text-align: center;
+                                        color: #8b95a1;
+                                        display: inline-block;
+                                        position: absolute;
+                                    }
+                                }
+                            }
+
+                            .span_blank_1 {
+                                display: block;
+                                font-size: 15px;
+                                line-height: 24px;
+                                color: rgb(78, 89, 104);
+                                margin-bottom: 24px;
+                                list-style-position: outside;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #wide_5_inner_logo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                >img {
+                    width: 154px;
+                    margin: 72px 0px;
+                }
+            }
+        }
+
+        #blank_16 {
+            flex: 0 0 auto;
+            height: 64px;
+        }
+
+        #blank_17 {
+            display: block;
+            font-size: 15px;
+            line-height: 24px;
+            color: rgb(78, 89, 104);
+            margin-bottom: 24px;
+            list-style-position: outside;
+        }
+    }
+}
