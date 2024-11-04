@@ -1,0 +1,59 @@
+@import '../../setting/utils';
+@import '../../setting/variables';
+@import '../../setting/animations';
+
+//wide main2
+
+#wide_card_main_2_container {
+    will-change: transform, opacity;
+    transition: transform 1000ms, opacity 1000ms;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+
+    #wide_2_inner_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #wide_2_inner_box {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 220px;
+            margin-bottom: 324px;
+            max-width: 960px;
+            width: 100%;
+
+            #wide_2_inner_img {
+                @include size(260px, 260px);
+            }
+
+            #wide_2_inner_content {
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                #wide_2_inner_subtitle {
+                    color: rgb(107, 118, 132);
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 1.6;
+                }
+
+                #blank_6 {
+                    flex: 0 0 auto;
+                    height: 8px;
+                }
+
+                #wide_2_inner_title {
+                    color: rgb(51, 61, 75);
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+}
