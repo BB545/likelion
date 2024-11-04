@@ -1,0 +1,68 @@
+@import '../../setting/utils';
+@import '../../setting/variables';
+@import '../../setting/animations';
+
+//wide main3
+
+#wide_card_main_3_container {
+    will-change: transform, opacity;
+    transition: transform 1000ms, opacity 1000ms;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+
+    #wide_3_inner_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #wide_3_inner_box {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-left: 100px;
+            max-width: 1100px;
+            width: 100%;
+
+            #wide_3_inner_content {
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .wide_3_inner_badge {
+                    color: rgb(107, 118, 132);
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 1.6;
+                }
+
+                .wide_3_inner_title {
+                    color: rgb(51, 61, 75);
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 1.3;
+                }
+
+                .blank_8 {
+                    flex: 0 0 auto;
+                    height: 8px;
+                }
+
+                #blank_9 {
+                    flex: 0 0 auto;
+                    height: 28px;
+                }
+            }
+
+            #wide_3_inner_img {
+                @include size(360px, 360px);
+            }
+        }
+    }
+
+    #blank_7 {
+        flex: 0 0 auto;
+        height: 281px;
+    }
+}
