@@ -1,8 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import MainCardCanvas from './MainCardCanvas';
 
 const Main3 = () => {
+    const section3Ref = useRef(null);
+
     useEffect(() => {
+        if (section3Ref.current) {
+            section3Ref.current.style.transform = 'translate3d(0px, 100px, 0px)';
+            section3Ref.current.style.opacity = '0';
+
+            setTimeout(() => {
+                if (section3Ref.current) {
+                    section3Ref.current.style.transform = 'translate3d(0px, 0px, 0px)';
+                    section3Ref.current.style.opacity = '1';
+                }
+            }, 1000)
+        }
+
         const elements = document.querySelectorAll('.bottom_color_change');
         let index = 0;
 
@@ -41,7 +55,7 @@ const Main3 = () => {
         <div id='main_3_container'>
             <div id="main_3_inner_container">
                 <section id="main_3_inner_section">
-                    <div id="inner_title">
+                    <div id="inner_title" ref={section3Ref}>
                         <h2 id="title_main">
                             <span id="title_main_top">앞뒤 다른 여덟가지</span>
                             <div id="title_main_bottom">

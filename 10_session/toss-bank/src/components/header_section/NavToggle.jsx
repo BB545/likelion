@@ -38,7 +38,7 @@ const NavToggle = ({ navListIndex }) => {
             { title: '외환', subItems: ['외화 통장'] },
         ],
         [
-            { title: '카드', subItems: ['체크카드', '모임카드'] },
+            { title: '카드', subItems: [<Link to="/">체크카드</Link>, '모임카드'] },
             { title: '제휴 신용카드', subItems: [<Link to="/card/widecard">하나카드 Wide</Link>] },
         ],
         [

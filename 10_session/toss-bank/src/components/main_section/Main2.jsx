@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import MainCard from './MainCard'
 
 const Main2 = () => {
+    const section2Ref = useRef(null);
+
+    useEffect(() => {
+        if (section2Ref.current) {
+            section2Ref.current.style.transform = 'translate3d(0px, 100px, 0px)';
+            section2Ref.current.style.opacity = '0';
+
+            setTimeout(() => {
+                if (section2Ref.current) {
+                    section2Ref.current.style.transform = 'translate3d(0px, 0px, 0px)';
+                    section2Ref.current.style.opacity = '1';
+                }
+            }, 1000)
+        }
+    }, []);
+
     return (
         <div id='main_2_container'>
             <div id="main_2_inner_container">
                 <section id="main_2_section_title">
                     <h3 id="title_black">나에게 맞게 언제든지</h3>
-                    <div id="title_color_area">
+                    <div id="title_color_area" ref={section2Ref}>
                         <div id="title_color_box">
                             <div id="title_color">
                                 <h3 id="title_color_line">
